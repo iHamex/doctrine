@@ -53,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleHeaderSidebarVisibility();
     updateLogoLinkByLocale();
 
+    if (window.location.pathname === '/doctrine/' || window.location.pathname === '/doctrine') {
+        window.location.replace("https://ihamex.github.io/doctrine/introduction/");
+    }
+
     const observer = new MutationObserver(() => {
         toggleHomeButtonVisibility();
         toggleHeaderSidebarVisibility();
