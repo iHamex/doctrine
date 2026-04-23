@@ -9,7 +9,7 @@ function updateLogoLinkByLocale() {
     const logoLink = document.querySelector('.md-logo');
     
     if (logoLink) {
-        logoLink.href = currentLang === 'en' ? '/doctrine/' : '/de/';
+        logoLink.href = currentLang === 'en' ? '/doctrine/introduction/' : '/de/';
     }
 }
 
