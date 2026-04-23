@@ -1,0 +1,180 @@
+site_name: Doctrine Documentation
+site_url: https://ihamex.github.io/doctrine/
+# Documentation directory
+docs_dir: docs
+
+# Repository
+repo_name: doctrine-docs
+
+# Theme Settings
+theme:
+  language: en
+  name: material
+  logo: media/doctrine-logo.svg
+  favicon: media/favicon.png
+  palette:
+    - scheme: slate
+      primary: 'blue grey'
+      accent: 'indigo'
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  features:
+    # navigation.instant and navigation.prefetch, 
+    # are not compatible with Search on language switch toggle
+    #- navigation.instant
+    #- navigation.instant.prefetch
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.select
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.mermaid
+
+
+# CSS Settings
+extra_css:
+  - media/custom.css
+
+
+# JS Settings
+extra_javascript:
+  - media/custom.js
+
+
+# Extra Settings
+extra:
+  generator: false
+
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true 
+      linenums_style: pymdownx-inline
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - sane_lists
+
+# Plugins
+plugins:
+  - search
+
+# Navigation Structure
+nav:
+  - Getting Started:
+    - introduction.md
+    - installation.md
+    - configuration.md
+    - quick-start.md
+  - Fundamentals:
+    - entity-basics.md
+    - entity-manager.md
+    - repositories.md
+  - Entity Mapping:
+    - field-and-column-mapping.md
+    - generated-values.md
+  - Relationships:
+    - relationships-introduction.md
+    - one-to-one.md
+    - one-to-many.md
+    - many-to-one.md
+    - many-to-many.md
+  - Querying:
+    - querying-introduction.md
+    - dql.md
+    - query-builder.md
+    - native-queries.md
+    - custom-hydration.md
+  - Database Operations:
+    - schema-management.md
+    - migrations.md
+    - transactions.md
+    - constraints.md
+  - Advanced Features:
+    - inheritance.md
+    - events.md
+    - filters.md
+    - second-level-cache.md
+    - custom-dql-functions.md
+  - Best Practices:
+    - performance.md
+    - validation.md
+    - testing.md
+    - security.md
+    - debugging.md
+  - "Real-World: Symfony User Management":
+    - symfony-user-management/index.md
+    - symfony-user-management/project-checklist.md
+    - symfony-user-management/setup.md
+    - symfony-user-management/request-data-mapping.md
+    - symfony-user-management/entity-and-mapping.md
+    - symfony-user-management/repository-and-queries.md
+    - symfony-user-management/controllers-and-routes.md
+    - symfony-user-management/forms-and-validation.md
+    - symfony-user-management/views-and-twig.md
+    - symfony-user-management/security-and-auth.md
+    - symfony-user-management/crud-advanced.md
+    - symfony-user-management/relationships-and-inheritance.md
+    - symfony-user-management/lifecycle-events-and-subscribers.md
+    - symfony-user-management/doctrine-filters-and-soft-delete.md
+    - symfony-user-management/custom-dql-native-and-hydration.md
+    - symfony-user-management/second-level-cache-integration.md
+    - symfony-user-management/transactions-and-concurrency.md
+    - symfony-user-management/testing-and-fixtures.md
+    - symfony-user-management/performance-and-caching.md
+    - symfony-user-management/deployment-and-env.md
+    - symfony-user-management/troubleshooting-faq.md
+  - Reference:
+    - api-reference.md
+    - commands.md
+    - troubleshooting.md
+    - faq.md
+
+# Copyright Text
+copyright: © 2025 Hamed Okhovvat
+
+
